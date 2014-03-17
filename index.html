@@ -1,399 +1,100 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Grid</title>
-    <meta name="description" content="A simple responsive framework.">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="grid.css" type="text/css" />
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
 
-  <!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-  <![endif]-->
+	<style>
+	body { background-color: aliceblue; }
+	.page-container { margin: 0 auto; max-width: 960px; width: 90%; }
+	.gist .gist-file .gist-meta { display: none !important;}
+	section { border-top: 1px dotted black; margin: 10px 0; padding: 10px 0; }
+	</style>
+</head>
 
-    <!-- Typekit -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-  </head>
-
-  <body>
-    <header>
-      <div class='container'>
-        <div class="intro">
-          <a href="http://www.adamkaplan.me/grid">
-            <h1>grid</h1>
-          </a>
-          <p>A simple guide to responsive design.<br>Made by <a href="http://www.adamkaplan.me/" target="_blank">Adam Kaplan</a>.</p>
-        </div>
-        <img src="images/intro.png" alt="Intro" class="animated fadeInUp">
-      </div>
-    </header>
-
-    <section>
-      <div class='container'>
-        <img src="images/rwd.png" alt="RWD" class="rwd">
-        <h1>Why bother with responsive?</h1>
-        <p>We want our websites to be useable on all devices by responding to
-        the user’s behavior, screen size and screen orientation.</p>
-      </div>
-    </section>
-
-    <section class="example fragmentation">
-      <div class="container"></div>
-    </section>
-
-    <section>
-      <div class='container'>
-        <h1>A Fragmented World</h1>
-        <p><a href='http://opensignal.com/reports/fragmentation-2013/' target="_blank">As of 2013</a>, there are thousands of different devices and screen sizes that browse the
-        internet, so it's impossible to design layouts to target them all. Instead, we must take a more fluid approach to
-        design.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class='container'>
-        <div class="circle">1</div>
-        <h1>Add the Viewport Meta Tag</h1>
-        <p>Place in the <code>&lt;head&gt;</code> of your HTML. This enables use of media queries for cross-device layouts.
-        <hr>
-        <script src="https://gist.github.com/anonymous/9225627.js"></script>
-		<hr>
-		<p>And place this in your CSS for compatibility with IE10+</p>
-		<br>
-		<script src="https://gist.github.com/anonymous/9550313.js"></script>
-      </div>
-    </section>
-
-    <section class="example">
-      <div class="container">
-        <img src="images/box-model.png" alt="Box Model">
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h1>CSS Box Model</h1>
-        <p>It's important to understand the basics, like how elements are generated and behave in the browser, before
-        diving into responsive web design. The CSS Box Model consists of four distinct parts.</p>
-        <hr>
-
-        <div class="row">
-          <div class="column one-fourth">
-            <img src="images/content.png" alt="content">
-            <h3 class="content">Content</h3>
-            <p>The content of the box, where text and images appear.</p>
-          </div>
-
-          <div class="column one-fourth">
-            <img src="images/padding.png" alt="padding">
-            <h3 class="padding">Padding</h3>
-            <p>Clears an area around the content.</p>
-          </div>
-
-          <div class="column one-fourth">
-            <img src="images/border.png" alt="border">
-            <h3 class="border">Border</h3>
-            <p>A border that goes around the padding.</p>
-          </div>
-
-          <div class="column one-fourth">
-            <img src="images/margin.png" alt="margin">
-            <h3 class="margin">Margin</h3>
-            <p>Clears an area around the border.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class='container'>
-        <div class="circle">2</div>
-        <h1>Use box-sizing: border-box</h1>
-        <p>Place at the top of your <code>CSS</code> file. The <code>*</code> will target all elements on the page.</p>
-        <hr>
-        <script src="https://gist.github.com/anonymous/9225647.js"></script>
-      </div>
-    </section>
-
-
-    <section>
-      <div class="container">
-        <h1>Your Choice</h1>
-        <p><a href="http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug" target="_blank">What was once a bug</a>
-        is now widely used CSS property. It basically means you can choose whether or not to include borders and padding in
-        the width of your content.</p>
-        <hr>
-
-        <div class="row">
-          <div class="column half">
-            <img src="images/without-box-model.png" alt="Without Box Model">
-            <h3>Without box-sizing: border-box</h3>
-            <p>Margin, borders and padding are drawn outside the set width of your content.</p>
-          </div>
-
-          <div class="column half">
-            <img src="images/with-box-model.png" alt="With Box Model">
-            <h3>With box-sizing: border-box</h3>
-            <p>Borders and padding are drawn inside the set width of your content. The margin is drawn outside.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class='container'>
-        <div class="circle">3</div>
-        <h1>Create a Container</h1>
-        <p>A container holds all elements and controls the page's maximum width. Using a container will make designing for
-        responsive easier!</p>
-        <hr>
-        <script src="https://gist.github.com/anonymous/9225660.js"></script>
-        <script src="https://gist.github.com/anonymous/9225665.js"></script>
-      </div>
-    </section>
-
-    <section class="example">
-      <div class="container">
-        <img src="images/container.png" alt="Container">
-      </div>
-    </section>
-
-    <section>
-      <div class='container'>
-        <div class="circle">4</div>
-        <h1>Create a Column</h1>
-        <p>A column is a class used for stacking content horizontally. The first margin is removed using the
-        <a href="http://www.adamkaplan.me/pseudo-classes/">pseudo-class</a> <code>first-child</code>.</p>
-        <hr>
-        <script src="https://gist.github.com/anonymous/9225669.js"></script>
-        <script src="https://gist.github.com/anonymous/9225672.js"></script>
-      </div>
-    </section>
-
-    <section class="example grid">
-      <div class="container">
-        <div class="column">
-          <span>.column</span>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class='container'>
-        <div class="circle">5</div>
-        <h1>Create Column Sizes</h1>
-          <p>Add size classes to columns to create a reuseable grid system.</p>
-          <hr>
-          <script src="https://gist.github.com/anonymous/9225679.js"></script>
-          <script src="https://gist.github.com/anonymous/9225683.js"></script>
-        </div>
-      </section>
-
-      <section class="example grid">
-        <div class="container">
-          <div class="row">
-            <div class="column full">
-              <span>.column .full</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="column two-thirds">
-              <span>.column .two-thirds</span>
-            </div>
-
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="column half">
-              <span>.column .half</span>
-            </div>
-
-            <div class="column half">
-              <span>.column .half</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="column one-fourth">
-              <span>.column .one-fourth</span>
-            </div>
-
-            <div class="column one-fourth">
-              <span>.column .one-fourth</span>
-            </div>
-
-            <div class="column one-fourth">
-              <span>.column .one-fourth</span>
-            </div>
-
-            <div class="column one-fourth">
-              <span>.column .one-fourth</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class='container'>
-          <div class="circle">6</div>
-          <h1>Create Rows</h1>
-          <p>Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise known as clearing
-          issues. Rows are cleared with a <code>clearfix</code>.</p>
-          <hr>
-          <script src="https://gist.github.com/anonymous/9225691.js"></script>
-          <hr>
-          <script src="https://gist.github.com/anonymous/9225695.js"></script>
-        </div>
-      </section>
-
-      <section class="example grid row-example">
-        <div class="container">
-          <div class="row clearfix">
-            <div class="column half">
-              <span>.column .half</span>
-            </div>
-
-            <div class="column half">
-              <span>.column .half</span>
-            </div>
-          </div>
-
-          <div class="row clearfix">
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-
-            <div class="column one-third">
-              <span>.column .one-third</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class='container'>
-          <div class="circle">7</div>
-          <h1>Add a Mobile Breakpoint</h1>
-          <p>If the browser's screen size is within a set range, a media query
-          will replace the CSS the browser uses. This is the bread and butter of
-          responsive web design.</p>
-          <hr>
-          <script src="https://gist.github.com/anonymous/9225701.js"></script>
-        </div>
-      </section>
-
-      <section class="example grid">
-        <div class="mobile-background">
-          <div class="container mobile">
-            <div class="row">
-              <div class="column half">
-                <span>.column .half</span>
-              </div>
-
-              <div class="column half">
-                <span>.column .half</span>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="column one-third">
-                <span>.column .one-third</span>
-              </div>
-
-              <div class="column one-third">
-                <span>.column .one-third</span>
-              </div>
-
-              <div class="column one-third">
-                <span>.column .one-third</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class='container'>
-          <div class="circle">8</div>
-          <h1>Make It Work With IE8</h1>
-          <p>Add the <a href="https://github.com/aFarkas/html5shiv" target="_blank">html5shiv</a>
-          and <a href="https://github.com/scottjehl/Respond" target="_blank">Respond.js</a>
-          polyfills in the <code>&lt;head&gt;</code> of your HTML
-          to enable html5 elements and responsive breakpoints in Internet Explorer 8.</p>
-          <hr>
-          <script src="https://gist.github.com/anonymous/9225714.js"></script>
-        </div>
-      </section>
-
-      <section>
-        <div class='container'>
-          <h1>Practice Makes Perfect</h1>
-          <p>By following these simple steps, you are on the path to responsive
-          web design mastery. Keep practicing and help make the web a better,
-          more useable place.</p>
-          <hr>
-          <p><a href="https://github.com/jordanlev/grid" target="_blank">View the code for this project</a>.</p>
-        </div>
-      </section>
-
-      <section class="resources">
-        <div class="container">
-          <div class="column half">
-            <h3>Further Reading</h3>
-            <hr class="small">
-            <ul>
-              <li><a href="http://alistapart.com/article/for-a-future-friendly-web" target="_blank">For a Future-Friendly Web</a></li>
-              <li><a href="http://www.abookapart.com/products/responsive-web-design" target="_blank">A Book Apart: Responsive Web Design</a></li>
-              <li><a href="http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972" target="_blank">Don't Forget the Viewport Meta Tag</a></li>
-              <li><a href="http://fuseinteractive.ca/blog/understanding-humble-clearfix" target="_blank">Understanding the Humble Clearfix</a></li>
-              <li><a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design" target="_blank">Beginner’s Guide to Responsive Web Design</a></li>
-            </ul>
-          </div>
-
-          <div class="column half">
-            <h3>References</h3>
-            <hr class="small">
-            <ul>
-              <li><a href="http://opensignal.com/reports/fragmentation-2013/" target="_blank">Android Fragmentation Visualized</a></li>
-              <li><a href="http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug" target="_blank">Internet Explorer Box Model</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model" target="_blank">Box Model</a></li>
-              <li><a href="http://css-tricks.com/snippets/css/clear-fix/" target="_blank">Force Element To Self-Clear its Children</a></li>
-              <li><a href="https://developers.google.com/chrome-developer-tools/" target="_blank">Chrome Developer Tools</a></li>
-              <li><a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+<body>
+	
+	<div class="page-container">
+		
+		<header>
+			<h1>Minimal Responsive Grid</h1>
+			<p>How to create a responsive layout in a few easy steps.</p>
+			<p style="font-style: italic;">With thanks to <a href="http://www.adamkaplan.me/">Adam Kaplan</a> for the inspiration and enlightenment.</p>
+		</header>
+		
+		<section>
+			<h2>Step 1: Set the viewport</h2>
+			<p>Tell the browser that the page should be sized to the width of the device or browser window itself (not the "desktop" page size) by putting this in your HTML <code>&lt;head&gt;</code>:</p>
+			<script src="https://gist.github.com/anonymous/9225627.js"></script>
+		</section>
+		
+		<section>
+			<h2>Step 2: Use the better box model</h2>
+			<p>Tell the browser to treat padding and border widths as part of the overall element width (so we can sanely use percentages for element widths) by putting this in your CSS:</p>
+			<script src="https://gist.github.com/anonymous/9225647.js"></script>
+			<p><small><a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">More details</a>.</small></p>
+		</section>
+		
+		<section>
+			<h2>Step 3: Create a page container</h2>
+			<p>Sets a maximum width for the layout on wide (desktop) screns.</p>
+			<script src="https://gist.github.com/anonymous/9225660.js"></script>
+			<script src="https://gist.github.com/anonymous/9225665.js"></script>
+		</section>
+		
+		<section>
+			<h2>Step 4: Create rows</h2>
+			<p>Rows are containers for columns -- a row will always be placed underneath a prior row, regardless of screen width.</p>
+			<script src="https://gist.github.com/anonymous/9225691.js"></script>
+			<script src="https://gist.github.com/anonymous/9592770.js"></script>
+			<p><small><a href="http://css-tricks.com/snippets/css/clear-fix/">More details</a>.</small></p>
+		</section>
+		
+		<section>
+			<h2>Step 5: Create columns</h2>
+			<p>Columns are containers for the actual page content -- they will line up next to each other on wide screens, or underneath each other on narrow screens.</p>
+			<script src="https://gist.github.com/anonymous/9225669.js"></script>
+			<script src="https://gist.github.com/anonymous/9225683.js"></script>
+			<script src="https://gist.github.com/anonymous/9225679.js"></script>
+		</section>
+		
+		<section>
+			<h2>Step 6: Set mobile breakpoints</h2>
+			<p>Set the screen width at which the columns should be displayed underneath one another as opposed to next to each other.</p>
+			<script src="https://gist.github.com/anonymous/9225701.js"></script>
+		</section>
+		
+		<section>
+			<h2>Step 7: Make it backwards and forwards compatible</h2>
+			<p>To ensure your layout works with old versions of Internet Explorer, add the following to your HTML <code>&lt;head&gt;</code>:</p>
+			<script src="https://gist.github.com/anonymous/9225714.js"></script>
+			<p>And to ensure your layout will continue to work with future browsers, add the following to your CSS:</p>
+			<script src="https://gist.github.com/anonymous/9592484.js"></script>
+			<p><small><a href="http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/">More</a> <a href="http://www.netmagazine.com/features/five-steps-gettin-flexy-responsive-web-design">details</a>.</small></p>
+		</section>
+		
+		<section>
+			<h2>What's next?</h2>
+			<p>The above steps represent all the basics you need to know to create reponsive layouts. But here are more things you might want to consider:</p>
+			<ul>
+				<li>Ensure images work with your responsive design by adding the following to your CSS:<script src="https://gist.github.com/anonymous/9593063.js"></script></li>
+				<li>Make your markup a little bit <a href="http://css-tricks.com/semantic-class-names/">more semantic</a> by changing the <code>row</code> class to <code>group</code>, and <code>column</code> to <code>item</code> (since they are not really "rows" or "columns" on narrow width screens).</li>
+				<li>Make your markup a LOT more semantic by not utilizing a grid at all -- instead, simply apply the above principles to the existing structure of your markup! Or <a href="http://semantic.gs/">see</a> <a href="http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/">how</a> <a href="http://neat.bourbon.io/">others</a> are accomplishing the same goal with LESS &amp; SASS.</li>
+				<li>Make your design even more backwards- and forwards-compatible by going <a href="http://www.adamkaplan.me/grid/">mobile first</a>.</li>
+				<li>Read the original <a href="http://www.abookapart.com/products/responsive-web-design">Responsive Web Design book</a> for a more thorough understanding of these concepts and techniques.</li>
+			</ul>
+		</section>
+	</div>
+	
+	
+</body>
 </html>
